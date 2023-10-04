@@ -45,7 +45,7 @@ const props = defineProps({
   },
 });
 
-const data = ref(props.data);
-
 console.log(props.data);
+
+const data = ref(props.data);
 </script>

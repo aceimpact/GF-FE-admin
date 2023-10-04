@@ -51,8 +51,6 @@ const fetchData = async () => {
 const displayData = computed(() => {
   const start: number = (pagination.value.page - 1) * pagination.value.perPage;
   const end: number = start + pagination.value.perPage;
-  console.log(start);
-  console.log(end);
 
   return originalData.value.slice(start, end);
 });
