@@ -47,7 +47,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, defineEmits } from 'vue';
 import { Common } from '@/types';
 
 const props = defineProps({
@@ -60,15 +60,15 @@ const props = defineProps({
 
 const pagination = ref(props.pagination);
 
-// const { emit } = defineEmits([
-//   'click:first',
-//   'click:last',
-//   'click:next',
-//   'click:prev',
-// ]);
+const { emit } = defineEmits([
+  'click:first',
+  'click:last',
+  'click:next',
+  'click:prev',
+]);
 
 const toFirstPage = () => {
-  this.$emit('click:first', 1);
+  emit('click:first', 1);
 };
 // function toFirstPage() {
 //   pagination.value.page = 1;
